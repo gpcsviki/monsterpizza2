@@ -1,47 +1,48 @@
+import { Routes, Route } from "react-router-dom"
 import { Toaster } from "sonner"
 import { ThemeProvider } from "@/hooks/theme-provider"
-import { Navbar } from "@/components/sections/Navbar"
-import { Hero } from "@/components/sections/Hero"
-import { Highlights } from "@/components/sections/Highlights"
-import { Menu } from "@/components/sections/Menu"
-import { Specials } from "@/components/sections/Specials"
-import { About } from "@/components/sections/About"
-import { Gallery } from "@/components/sections/Gallery"
-import { Reviews } from "@/components/sections/Reviews"
-import { Location } from "@/components/sections/Location"
-import { OrderForm } from "@/components/sections/OrderForm"
-import { Footer } from "@/components/sections/Footer"
-import { FloatingOrderButton } from "@/components/FloatingOrderButton"
+import { CartProvider } from "@/contexts/CartContext"
+import { HomePage } from "@/pages/HomePage"
+import { CartPage } from "@/pages/CartPage"
+import { CheckoutPage } from "@/pages/CheckoutPage"
+import { OrderPage } from "@/pages/OrderPage"
+import { AdminPage } from "@/pages/AdminPage"
+import { PizzaRozvozBratislava } from "@/pages/seo/PizzaRozvozBratislava"
+import { PizzaPetrzalka } from "@/pages/seo/PizzaPetrzalka"
+import { PizzaRuzinov } from "@/pages/seo/PizzaRuzinov"
+import { RodinnaPizzaBratislava } from "@/pages/seo/RodinnaPizzaBratislava"
+import { PizzaNoveMesto } from "@/pages/seo/PizzaNoveMesto"
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="monster-pizza-theme">
-      <div className="min-h-screen bg-background">
-        <Navbar />
-        <main>
-          <Hero />
-          <Highlights />
-          <Menu />
-          <Specials />
-          <About />
-          <Gallery />
-          <Reviews />
-          <Location />
-          <OrderForm />
-        </main>
-        <Footer />
-        <FloatingOrderButton />
-        <Toaster 
-          position="bottom-center" 
-          toastOptions={{
-            style: {
-              background: "hsl(var(--card))",
-              color: "hsl(var(--card-foreground))",
-              border: "1px solid hsl(var(--border))",
-            },
-          }}
-        />
-      </div>
+      <CartProvider>
+        <div className="min-h-screen bg-background">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/order/:id" element={<OrderPage />} />
+            <Route path="/admin" element={<AdminPage />} />
+            {/* SEO Landing Pages */}
+            <Route path="/pizza-rozvoz-bratislava" element={<PizzaRozvozBratislava />} />
+            <Route path="/pizza-petrzalka" element={<PizzaPetrzalka />} />
+            <Route path="/pizza-ruzinov" element={<PizzaRuzinov />} />
+            <Route path="/rodinna-pizza-bratislava" element={<RodinnaPizzaBratislava />} />
+            <Route path="/pizza-nove-mesto" element={<PizzaNoveMesto />} />
+          </Routes>
+          <Toaster 
+            position="bottom-center" 
+            toastOptions={{
+              style: {
+                background: "hsl(var(--card))",
+                color: "hsl(var(--card-foreground))",
+                border: "1px solid hsl(var(--border))",
+              },
+            }}
+          />
+        </div>
+      </CartProvider>
     </ThemeProvider>
   )
 }

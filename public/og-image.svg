@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a1a1a"/>
+  
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#84cc16" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1a1a1a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Logo Circle -->
+  <circle cx="600" cy="220" r="100" fill="#84cc16"/>
+  <text x="600" y="260" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="80" fill="white">M</text>
+  
+  <!-- Title -->
+  <text x="600" y="380" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="72" fill="white">MONSTER PIZZA</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#84cc16">Bezlepková Pizza Bratislava</text>
+  
+  <!-- Tagline -->
+  <text x="600" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#888888">Čerstvé suroviny • Rýchly rozvoz • Objednajte online</text>
+  
+  <!-- Phone -->
+  <text x="600" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#84cc16">📞 0918 127 810</text>
+</svg>

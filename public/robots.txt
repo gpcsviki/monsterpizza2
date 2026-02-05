@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://monsterpizza.sk/sitemap.xml
+
+# Disallow admin and checkout pages
+Disallow: /admin
+Disallow: /checkout
+Disallow: /order/
+
+# Allow all crawlers to index SEO pages
+User-agent: Googlebot
+Allow: /pizza-rozvoz-bratislava
+Allow: /pizza-petrzalka
+Allow: /pizza-ruzinov
+Allow: /rodinna-pizza-bratislava
+Allow: /pizza-nove-mesto
+
+User-agent: Bingbot
+Allow: /pizza-rozvoz-bratislava
+Allow: /pizza-petrzalka
+Allow: /pizza-ruzinov
+Allow: /rodinna-pizza-bratislava
+Allow: /pizza-nove-mesto

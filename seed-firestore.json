@@ -1,0 +1,80 @@
+{
+  "products": {
+    "sunkova": {
+      "name": "Šunková",
+      "description": "Paradajkový základ, mozzarella, šunka",
+      "basePrice": 6.9,
+      "imageUrl": "",
+      "allergens": ["lepok", "mlieko"],
+      "isActive": true,
+      "sizes": [
+        { "label": "Štandardná", "priceDelta": 0 },
+        { "label": "Veľká", "priceDelta": 2 }
+      ],
+      "extras": [
+        { "id": "extra-cheese", "label": "Extra syr", "price": 1 },
+        { "id": "chili", "label": "Chilli vločky", "price": 0 },
+        { "id": "garlic-dip", "label": "Cesnakový dip", "price": 0.5 }
+      ]
+    },
+    "syrova": {
+      "name": "Syrová",
+      "description": "Paradajkový základ, mozzarella, eidam, niva",
+      "basePrice": 7.5,
+      "imageUrl": "",
+      "allergens": ["lepok", "mlieko"],
+      "isActive": true,
+      "sizes": [
+        { "label": "Štandardná", "priceDelta": 0 },
+        { "label": "Veľká", "priceDelta": 2 }
+      ],
+      "extras": [
+        { "id": "extra-cheese", "label": "Extra syr", "price": 1 },
+        { "id": "chili", "label": "Chilli vločky", "price": 0 },
+        { "id": "garlic-dip", "label": "Cesnakový dip", "price": 0.5 }
+      ]
+    },
+    "hawai": {
+      "name": "Hawai",
+      "description": "Paradajkový základ, mozzarella, šunka, ananás",
+      "basePrice": 7.9,
+      "imageUrl": "",
+      "allergens": ["lepok", "mlieko"],
+      "isActive": true,
+      "sizes": [
+        { "label": "Štandardná", "priceDelta": 0 },
+        { "label": "Veľká", "priceDelta": 2 }
+      ],
+      "extras": [
+        { "id": "extra-cheese", "label": "Extra syr", "price": 1 },
+        { "id": "chili", "label": "Chilli vločky", "price": 0 },
+        { "id": "garlic-dip", "label": "Cesnakový dip", "price": 0.5 }
+      ]
+    },
+    "salami": {
+      "name": "Salámová",
+      "description": "Paradajkový základ, mozzarella, saláma",
+      "basePrice": 7.5,
+      "imageUrl": "",
+      "allergens": ["lepok", "mlieko"],
+      "isActive": true,
+      "sizes": [
+        { "label": "Štandardná", "priceDelta": 0 },
+        { "label": "Veľká", "priceDelta": 2 }
+      ],
+      "extras": [
+        { "id": "extra-cheese", "label": "Extra syr", "price": 1 },
+        { "id": "chili", "label": "Chilli vločky", "price": 0 },
+        { "id": "garlic-dip", "label": "Cesnakový dip", "price": 0.5 }
+      ]
+    }
+  },
+  "settings": {
+    "global": {
+      "packagingFee": 0.5,
+      "deliveryFee": 0,
+      "orderNumberPrefix": "A",
+      "lastOrderNumber": 0
+    }
+  }
+}

@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Sun, Moon } from "lucide-react"
+import { Menu, X, Sun, Moon, ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { LogoMark } from "@/components/LogoMark"
 import { useTheme } from "@/hooks/use-theme"
+import { useCart } from "@/contexts/CartContext"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
@@ -20,6 +22,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { theme, setTheme } = useTheme()
+  const { itemCount } = useCart()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,6 +88,20 @@ export function Navbar() {
                   <Moon className="h-5 w-5" />
                 )}
               </button>
+
+              {/* Cart */}
+              <Link
+                to="/cart"
+                className="relative p-2 rounded-full hover:bg-muted transition-colors"
+                aria-label="Košík"
+              >
+                <ShoppingCart className="h-5 w-5" />
+                {itemCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-monster-green text-charcoal text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                    {itemCount > 9 ? "9+" : itemCount}
+                  </span>
+                )}
+              </Link>
 
               {/* Desktop CTA */}
               <Button className="hidden md:flex" asChild>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none">
+  <!-- Bottle -->
+  <path d="M70 50 L70 30 Q70 20 80 20 L120 20 Q130 20 130 30 L130 50" fill="#2d1810" stroke="#1a0f0a" stroke-width="2"/>
+  <path d="M65 50 Q50 80 50 120 L50 260 Q50 280 70 280 L130 280 Q150 280 150 260 L150 120 Q150 80 135 50 Z" fill="url(#kofolaGradient)" stroke="#1a0f0a" stroke-width="2"/>
+  <!-- Label -->
+  <rect x="55" y="140" width="90" height="80" rx="5" fill="#f5e6d3"/>
+  <text x="100" y="175" text-anchor="middle" font-family="Arial Black" font-size="18" fill="#2d1810">KOFOLA</text>
+  <text x="100" y="200" text-anchor="middle" font-family="Arial" font-size="12" fill="#5a4030">Originál</text>
+  <!-- Cap -->
+  <ellipse cx="100" cy="20" rx="25" ry="8" fill="#c4a000"/>
+  <defs>
+    <linearGradient id="kofolaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a2c1a"/>
+      <stop offset="50%" stop-color="#2d1810"/>
+      <stop offset="100%" stop-color="#1a0f0a"/>
+    </linearGradient>
+  </defs>
+</svg>

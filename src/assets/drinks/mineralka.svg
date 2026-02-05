@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none">
+  <!-- Bottle -->
+  <path d="M75 50 L75 30 Q75 20 85 20 L115 20 Q125 20 125 30 L125 50" fill="#e8f4fc" stroke="#b0d4e8" stroke-width="2"/>
+  <path d="M70 50 Q55 80 55 110 L55 260 Q55 280 75 280 L125 280 Q145 280 145 260 L145 110 Q145 80 130 50 Z" fill="url(#waterGradient)" stroke="#a0c8e0" stroke-width="2"/>
+  <!-- Bubbles -->
+  <circle cx="80" cy="200" r="5" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="110" cy="180" r="4" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="95" cy="220" r="6" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="120" cy="240" r="3" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="75" cy="160" r="4" fill="rgba(255,255,255,0.4)"/>
+  <!-- Label -->
+  <rect x="60" y="120" width="80" height="60" rx="5" fill="#ffffff" opacity="0.9"/>
+  <text x="100" y="150" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#0077b6">MINERÁLKA</text>
+  <text x="100" y="168" text-anchor="middle" font-family="Arial" font-size="10" fill="#0096c7">Perlivá</text>
+  <!-- Cap -->
+  <ellipse cx="100" cy="20" rx="20" ry="6" fill="#0077b6"/>
+  <defs>
+    <linearGradient id="waterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#caf0f8"/>
+      <stop offset="50%" stop-color="#90e0ef"/>
+      <stop offset="100%" stop-color="#48cae4"/>
+    </linearGradient>
+  </defs>
+</svg>

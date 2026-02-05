@@ -123,6 +123,11 @@ export function OrderForm() {
                       Donáška
                     </button>
                   </div>
+                  {orderType === "delivery" && (
+                    <p className="text-sm text-muted-foreground">
+                      Momentálne iba v taxi služby Bolt.
+                    </p>
+                  )}
                 </div>
 
                 {/* Name & Phone */}

@@ -80,9 +80,18 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-lg md:text-xl text-cream/70 mb-8 max-w-md mx-auto lg:mx-0"
+              className="text-lg md:text-xl text-cream/70 mb-4 max-w-md mx-auto lg:mx-0"
             >
               Prémiová chuť, poctivé suroviny a rýchla obsluha. Zastav sa u nás v Bratislave.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="text-lg md:text-xl font-bold text-monster-green mb-8 max-w-md mx-auto lg:mx-0"
+            >
+              🌾 Naše cesto neobsahuje lepok!
             </motion.p>
 
             <motion.div
