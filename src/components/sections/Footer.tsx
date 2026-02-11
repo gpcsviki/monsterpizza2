@@ -2,7 +2,7 @@ import { Facebook, Instagram } from "lucide-react"
 
 const socialLinks = [
   { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+  { icon: Instagram, href: "https://instagram.com/monster_pizza_shoppingpalace", label: "Instagram" },
 ]
 
 export function Footer() {
