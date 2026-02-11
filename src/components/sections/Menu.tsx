@@ -55,27 +55,27 @@ const menuData: MenuCategory[] = [
     id: "classics",
     label: "Klasiky",
     items: [
-      { productId: "sunkova", name: "Šunková", description: "Paradajkový základ, mozzarella, šunka", price: "6,90 €", priceNum: 6.9, badge: "popular", imageFilename: "sunkova.jpeg", ingredients: ["paradajkový základ", "mozzarella", "šunka"], allergens: ["lepok", "mlieko"] },
-      { productId: "salamova", name: "Salámová", description: "Paradajkový základ, mozzarella, saláma", price: "6,90 €", priceNum: 6.9, imageFilename: "salamova-klasic.jpeg", ingredients: ["paradajkový základ", "mozzarella", "saláma"], allergens: ["lepok", "mlieko"] },
-      { productId: "margherita", name: "Margherita", description: "Paradajkový základ, čerstvá mozzarella, bazalka", price: "6,90 €", priceNum: 6.9, badge: "popular", imageFilename: "margarita.jpeg", ingredients: ["paradajkový základ", "mozzarella", "bazalka"], allergens: ["lepok", "mlieko"] },
+      { productId: "sunkova", name: "Šunková", description: "Pomodoro, šunka, syr", price: "6,90 €", priceNum: 6.9, badge: "popular", imageFilename: "sunkova.jpeg", ingredients: ["pomodoro", "šunka", "syr"], allergens: ["lepok", "mlieko"] },
+      { productId: "salamova", name: "Salámová", description: "Pomodoro, saláma, syr", price: "6,90 €", priceNum: 6.9, imageFilename: "salamova-klasic.jpeg", ingredients: ["pomodoro", "saláma", "syr"], allergens: ["lepok", "mlieko"] },
+      { productId: "margherita", name: "Margherita", description: "Pomodoro, syr", price: "6,90 €", priceNum: 6.9, badge: "popular", imageFilename: "margarita.jpeg", ingredients: ["pomodoro", "syr"], allergens: ["lepok", "mlieko"] },
     ],
   },
   {
     id: "specials",
     label: "Monster Špeciály",
     items: [
-      { productId: "sedliacka", name: "Sedliacka", description: "Paradajkový základ, mozzarella, slanina, cibuľa, klobása", price: "8,90 €", priceNum: 8.9, badge: "popular", imageFilename: "sedliacka.jpeg", ingredients: ["paradajkový základ", "mozzarella", "slanina", "cibuľa", "klobása"], allergens: ["lepok", "mlieko"] },
-      { productId: "capri", name: "Capri", description: "Paradajkový základ, mozzarella, šunka, šampiňóny", price: "7,90 €", priceNum: 7.9, badge: "new", imageFilename: "capri.jpeg", ingredients: ["paradajkový základ", "mozzarella", "šunka", "šampiňóny"], allergens: ["lepok", "mlieko"] },
-      { productId: "kukuricova", name: "Kukuricová", description: "Paradajkový základ, mozzarella, kukurica, šunka", price: "7,90 €", priceNum: 7.9, imageFilename: "kukuricova.jpeg", ingredients: ["paradajkový základ", "mozzarella", "kukurica", "šunka"], allergens: ["lepok", "mlieko"] },
-      { productId: "bryndzova", name: "Bryndzová", description: "Smotanový základ, bryndza, slanina, cibuľka", price: "8,90 €", priceNum: 8.9, badge: "spicy", imageFilename: "bryndzova.jpeg", ingredients: ["smotanový základ", "bryndza", "slanina", "cibuľka"], allergens: ["lepok", "mlieko"] },
-      { productId: "slovensky-posuch", name: "Slovenský Posúch", description: "Smotanový základ, bryndza, slanina, cibuľka, kyslá smotana", price: "9,90 €", priceNum: 9.9, badge: "new", imageFilename: "slovensky-posuch.jpeg", ingredients: ["smotanový základ", "bryndza", "slanina", "cibuľka", "kyslá smotana"], allergens: ["lepok", "mlieko"] },
+      { productId: "sedliacka", name: "Sedliacka", description: "Pomodoro, syr, červená cibuľa, oravská slanina, klobása", price: "6,90 €", priceNum: 6.9, badge: "popular", imageFilename: "sedliacka.jpeg", ingredients: ["pomodoro", "syr", "červená cibuľa", "oravská slanina", "klobása"], allergens: ["lepok", "mlieko"] },
+      { productId: "capri", name: "Capri", description: "Pomodoro, šunka, syr, šampiňóny, kukurica", price: "6,90 €", priceNum: 6.9, badge: "new", imageFilename: "capri.jpeg", ingredients: ["pomodoro", "šunka", "syr", "šampiňóny", "kukurica"], allergens: ["lepok", "mlieko"] },
+      { productId: "kukuricova", name: "Kukuricová", description: "Pomodoro, šunka, syr, kukurica", price: "6,90 €", priceNum: 6.9, imageFilename: "kukuricova.jpeg", ingredients: ["pomodoro", "šunka", "syr", "kukurica"], allergens: ["lepok", "mlieko"] },
+      { productId: "bryndzova", name: "Bryndzová", description: "Smotanový základ, oravská slanina, bryndza, jarná cibuľka", price: "6,90 €", priceNum: 6.9, badge: "spicy", imageFilename: "bryndzova.jpeg", ingredients: ["smotanový základ", "oravská slanina", "bryndza", "jarná cibuľka"], allergens: ["lepok", "mlieko"] },
+      { productId: "slovensky-posuch", name: "Slovenský Posúch", description: "Smotanový základ, syr, oravská slanina, jarná cibuľka", price: "6,90 €", priceNum: 6.9, badge: "new", imageFilename: "slovensky-posuch.jpeg", ingredients: ["smotanový základ", "syr", "oravská slanina", "jarná cibuľka"], allergens: ["lepok", "mlieko"] },
     ],
   },
   {
     id: "veggie",
     label: "Vegetariánske",
     items: [
-      { productId: "vegeterian", name: "Vegetarián", description: "Paradajkový základ, mozzarella, paprika, kukurica, olivy, šampiňóny", price: "7,90 €", priceNum: 7.9, badge: "popular", imageFilename: "vegeterian.jpeg", ingredients: ["paradajkový základ", "mozzarella", "paprika", "kukurica", "olivy", "šampiňóny"], allergens: ["lepok", "mlieko"] },
+      { productId: "vegetariana", name: "Vegetariána", description: "Pomodoro, syr, kukurica, paradajky, paprika, rukola, balsamico", price: "6,90 €", priceNum: 6.9, badge: "popular", imageFilename: "vegeterian.jpeg", ingredients: ["pomodoro", "syr", "kukurica", "paradajky", "paprika", "rukola", "balsamico"], allergens: ["lepok", "mlieko"] },
     ],
   },
   {
