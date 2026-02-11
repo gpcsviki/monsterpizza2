@@ -84,7 +84,7 @@ const menuData: MenuCategory[] = [
     items: [
       { productId: "klasicke-stangle", name: "Klasické Štangle", description: "Chrumkavé štangle s cesnakovým maslom", price: "3,50 €", priceNum: 3.5, badge: "popular", imageFilename: "klasicke-stangle.jpeg", ingredients: ["cesto", "cesnak", "maslo"], allergens: ["lepok", "mlieko"] },
       { productId: "plnene-stangle-sunkove", name: "Plnené Štangle Šunkové", description: "Štangle plnené šunkou a syrom", price: "4,50 €", priceNum: 4.5, imageFilename: "plnene-stangle-sunkove.jpeg", ingredients: ["cesto", "šunka", "syr"], allergens: ["lepok", "mlieko"] },
-      { productId: "plnene-stangle-salama", name: "Plnené Štangle Salámové", description: "Štangle plnené salámou a syrom", price: "4,50 €", priceNum: 4.5, imageFilename: "plnene-stangle-salama.jpeg", ingredients: ["cesto", "saláma", "syr"], allergens: ["lepok", "mlieko"] },
+      { productId: "plnene-stangle-slaninove", name: "Plnené Štangle Slaninové", description: "Štangle plnené slaninou a syrom", price: "4,50 €", priceNum: 4.5, imageFilename: "plnene-stangle-salama.jpeg", ingredients: ["cesto", "slanina", "syr"], allergens: ["lepok", "mlieko"] },
       { productId: "cesnakovy-dip", name: "Cesnakový Dip", description: "Domáci cesnakový dip", price: "0,50 €", priceNum: 0.5, ingredients: ["smotana", "cesnak", "bylinky"], allergens: ["mlieko"] },
     ],
   },

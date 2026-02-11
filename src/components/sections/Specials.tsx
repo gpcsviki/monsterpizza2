@@ -9,7 +9,7 @@ import { Clock, Flame, Users } from "lucide-react"
 const specials = [
   {
     title: "Obedové Menu do 14:00",
-    description: "33 cm pizza + Kofola ZADARMO. Šunková, syrová, salámová, šunka + šampiňóny, šunka + kukurica.",
+    description: "33 cm pizza. Šunková, syrová, salámová, šunka + šampiňóny, šunka + kukurica.",
     price: "6,90 €",
     originalPrice: "8,80 €",
     gradient: "from-monster-green to-emerald-600",
