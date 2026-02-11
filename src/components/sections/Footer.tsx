@@ -1,7 +1,7 @@
 import { Facebook, Instagram } from "lucide-react"
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Facebook, href: "https://www.facebook.com/monster.pizza.584294", label: "Facebook" },
   { icon: Instagram, href: "https://instagram.com/monster_pizza_shoppingpalace", label: "Instagram" },
 ]
 
