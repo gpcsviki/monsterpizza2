@@ -1,17 +1,29 @@
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { SectionHeading } from "@/components/ui/section-heading"
 import { LogoMark } from "@/components/LogoMark"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
-const picImages = import.meta.glob("/src/assets/pic/**/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}", {
+const aboutImages = import.meta.glob("/src/assets/about/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}", {
   eager: true,
 }) as Record<string, { default: string }>
 
-const teamImage = Object.entries(picImages)
+const aboutImageList = Object.entries(aboutImages)
   .sort(([a], [b]) => a.localeCompare(b))
-  .find(([path]) => /team/i.test(path))?.[1].default
+  .map(([, mod]) => mod.default)
 
 export function About() {
+  const [currentImage, setCurrentImage] = useState(0)
+
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % aboutImageList.length)
+  }
+
+  const prevImage = () => {
+    setCurrentImage((prev) => (prev - 1 + aboutImageList.length) % aboutImageList.length)
+  }
+
   return (
     <section id="about" className="section-padding bg-background">
       <div className="container-custom">
@@ -54,15 +66,47 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            {/* Image placeholder */}
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-black/50 border border-white/10 flex items-center justify-center">
-              {teamImage ? (
-                <img
-                  src={teamImage}
-                  alt="Tím Monster Pizza"
-                  className="h-full w-full object-contain"
-                  loading="lazy"
-                />
+            {/* Image Gallery */}
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-black/50 border border-white/10">
+              {aboutImageList.length > 0 ? (
+                <>
+                  <img
+                    src={aboutImageList[currentImage]}
+                    alt={`O nás ${currentImage + 1}`}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                  {aboutImageList.length > 1 && (
+                    <>
+                      <button
+                        onClick={prevImage}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                        aria-label="Predchádzajúci obrázok"
+                      >
+                        <ChevronLeft className="h-5 w-5" />
+                      </button>
+                      <button
+                        onClick={nextImage}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                        aria-label="Ďalší obrázok"
+                      >
+                        <ChevronRight className="h-5 w-5" />
+                      </button>
+                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                        {aboutImageList.map((_, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => setCurrentImage(idx)}
+                            className={`w-2 h-2 rounded-full transition-colors ${
+                              idx === currentImage ? "bg-monster-green" : "bg-white/50"
+                            }`}
+                            aria-label={`Obrázok ${idx + 1}`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </>
               ) : (
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-600" />
               )}
