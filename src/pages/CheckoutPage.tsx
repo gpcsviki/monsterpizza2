@@ -64,8 +64,6 @@ export function CheckoutPage() {
   const {
     register,
     handleSubmit,
-    watch,
-    setValue,
     formState: { errors },
   } = useForm<CheckoutFormData>({
     resolver: zodResolver(checkoutSchema),
@@ -73,8 +71,6 @@ export function CheckoutPage() {
       fulfillment: "PICKUP",
     },
   })
-
-  const fulfillment = watch("fulfillment")
 
   const formatPrice = (price: number) => {
     return price.toFixed(2).replace(".", ",") + " €"
@@ -164,34 +160,12 @@ export function CheckoutPage() {
                     <div className="space-y-3">
                       <Label>Spôsob prevzatia</Label>
                       <div className="flex rounded-full bg-muted p-1">
-                        <button
-                          type="button"
-                          onClick={() => setValue("fulfillment", "PICKUP")}
-                          className={`flex-1 py-3 px-6 rounded-full font-display font-semibold transition-all ${
-                            fulfillment === "PICKUP"
-                              ? "bg-charcoal text-cream dark:bg-cream dark:text-charcoal"
-                              : "text-muted-foreground hover:text-foreground"
-                          }`}
+                        <div
+                          className="flex-1 py-3 px-6 rounded-full font-display font-semibold bg-charcoal text-cream dark:bg-cream dark:text-charcoal text-center"
                         >
                           Osobný odber
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => setValue("fulfillment", "DELIVERY")}
-                          className={`flex-1 py-3 px-6 rounded-full font-display font-semibold transition-all ${
-                            fulfillment === "DELIVERY"
-                              ? "bg-charcoal text-cream dark:bg-cream dark:text-charcoal"
-                              : "text-muted-foreground hover:text-foreground"
-                          }`}
-                        >
-                          Donáška
-                        </button>
+                        </div>
                       </div>
-                      {fulfillment === "DELIVERY" && (
-                        <p className="text-sm text-muted-foreground">
-                          Momentálne iba cez taxi službu Bolt.
-                        </p>
-                      )}
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -221,49 +195,7 @@ export function CheckoutPage() {
                       </div>
                     </div>
 
-                    {fulfillment === "DELIVERY" && (
-                      <div className="space-y-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="street">Ulica a číslo *</Label>
-                          <Input
-                            id="street"
-                            placeholder="Hlavná 123"
-                            {...register("street")}
-                            className={errors.street ? "border-tomato" : ""}
-                          />
-                          {errors.street && (
-                            <p className="text-sm text-tomato">{errors.street.message}</p>
-                          )}
-                        </div>
-                        <div className="grid sm:grid-cols-2 gap-4">
-                          <div className="space-y-2">
-                            <Label htmlFor="city">Mesto *</Label>
-                            <Input
-                              id="city"
-                              placeholder="Bratislava"
-                              {...register("city")}
-                              className={errors.city ? "border-tomato" : ""}
-                            />
-                            {errors.city && (
-                              <p className="text-sm text-tomato">{errors.city.message}</p>
-                            )}
-                          </div>
-                          <div className="space-y-2">
-                            <Label htmlFor="zip">PSČ *</Label>
-                            <Input
-                              id="zip"
-                              placeholder="821 01"
-                              {...register("zip")}
-                              className={errors.zip ? "border-tomato" : ""}
-                            />
-                            {errors.zip && (
-                              <p className="text-sm text-tomato">{errors.zip.message}</p>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
+                    
                     <div className="space-y-2">
                       <Label htmlFor="note">Poznámka k objednávke</Label>
                       <Textarea
