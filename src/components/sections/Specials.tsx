@@ -76,27 +76,29 @@ export function Specials() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
             >
-              <Card className="overflow-hidden bg-charcoal-light border-white/10 hover:border-monster-green transition-all duration-300 hover:glow-green">
+              <Card className="h-full flex flex-col overflow-hidden bg-charcoal-light border-white/10 hover:border-monster-green transition-all duration-300 hover:glow-green">
                 <div className={`h-48 bg-gradient-to-br ${special.gradient} flex items-center justify-center`}>
                   <special.icon className="h-16 w-16 text-cream/90 drop-shadow-sm" />
                 </div>
-                <CardContent className="p-6 text-cream">
+                <CardContent className="p-6 text-cream flex-1 flex flex-col">
                   <h3 className="font-display font-bold text-2xl mb-2">
                     {special.title}
                   </h3>
-                  <p className="text-cream/70 mb-4">
+                  <p className="text-cream/70 mb-4 flex-1">
                     {special.description}
                   </p>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="font-display font-bold text-3xl text-monster-green">
-                      {special.price}
-                    </span>
-                    <span className="text-lg text-cream/50 line-through">
-                      {special.originalPrice}
-                    </span>
-                  </div>
+                  {(special.price || special.originalPrice) && (
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="font-display font-bold text-3xl text-monster-green">
+                        {special.price}
+                      </span>
+                      <span className="text-lg text-cream/50 line-through">
+                        {special.originalPrice}
+                      </span>
+                    </div>
+                  )}
                   <Button 
-                    className="w-full" 
+                    className="w-full mt-auto" 
                     onClick={() => handleAddToOrder(special.title)}
                   >
                     Pridať do objednávky
