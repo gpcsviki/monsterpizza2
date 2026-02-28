@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { SectionHeading } from "@/components/ui/section-heading"
 import { toast } from "sonner"
-import { Clock, Flame, Users } from "lucide-react"
+import { Clock, Flame } from "lucide-react"
 
 const specials = [
   {
@@ -16,12 +16,12 @@ const specials = [
     icon: Clock,
   },
   {
-    title: "Rodinné Combo",
-    description: "2x veľká pizza + 2x Kofola + cesnakový chlieb. Pre celú rodinu.",
-    price: "19,90 €",
-    originalPrice: "25,90 €",
+    title: "Akcia",
+    description: "2x pizza + 2x dressing zadarmo!",
+    price: "",
+    originalPrice: "",
     gradient: "from-tomato to-red-600",
-    icon: Users,
+    icon: Flame,
   },
 ]
 
