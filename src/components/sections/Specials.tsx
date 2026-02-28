@@ -8,7 +8,7 @@ import { Clock, Flame, Users } from "lucide-react"
 
 const specials = [
   {
-    title: "Obedové Menu do 14:00",
+    title: "Obedové Menu do 14:00 (Po-Pi)",
     description: "33 cm pizza. Šunková, syrová, salámová, šunka + šampiňóny, šunka + kukurica.",
     price: "6,90 €",
     originalPrice: "8,80 €",
