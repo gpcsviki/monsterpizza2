@@ -16,8 +16,8 @@ const specials = [
     icon: Clock,
   },
   {
-    title: "Akcia",
-    description: "2x pizza + 2x dressing zadarmo!",
+    title: "Akcie",
+    description: "3 pizze + 1 zadarmo | 2 pizze + 2 dresingy zadarmo",
     price: "",
     originalPrice: "",
     gradient: "from-tomato to-red-600",
